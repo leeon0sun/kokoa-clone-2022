@@ -1,0 +1,66 @@
+.welcome-header {
+  margin: 90px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+}
+.welcome-header__title {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+.welcome-header__text {
+  width: 60%;
+  opacity: 0.7;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+
+#login-form input {
+  border: none;
+  padding: 15px 0px;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 25px;
+  transition: border-color 0.3s ease-in-out;
+}
+/* not */
+/* attrivute selector(특성 선택자) */
+#login-form input:not([type="submit"]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease-in-out;
+}
+/* input::placeholder input의 placeholder */
+/* input은 클래스가 없으므로 login-form이라는 id를 가진 form 안의 input에 적용*/
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/* input:focus input의 transition */
+#login-form input:focus {
+  border-color: var(--yellow);
+}
+
+/* if class를 이용했을 경우
+  .ligin-form__input{~~~}
+  .login-form__btn{}
+  .login-form__a{} */
+#login-form input[type="submit"] {
+  background-color: var(--yellow);
+  cursor: pointer;
+  padding: 20px 0px;
+  border-radius: 5px;
+}
+
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  /* inherit 상속/여기서 anchor는 부모인 login-form의 색상(현재 default는 블랙)을 받아옴 */
+  color: inherit;
+  font-size: 13px;
+}
