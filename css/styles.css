@@ -1,14 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
-
+/* 폰트 */
+/* 리셋 */
+/* variable */
+/* 이 위치가 아닌 아래 다른 위치들로 순서가 바뀌면 
+아직 import가 된게 아니기 때문에 위에서는 사용불가 적용안됨 순서 중요 */
 @import "reset.css";
 @import "variables.css";
 
 /* Components */
 @import "components/status-bar.css";
+@import "components/nav-bar.css";
+@import "components/screen-header.css";
+@import "components/user-component.css";
 
 /* Screens */
 @import "screens/login.css";
+@import "screens/friends.css";
 
 body {
+  color: #2e363e;
   font-family: "Open Sans", sans-serif;
+  height: 1000vh;
 }
